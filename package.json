@@ -21,9 +21,14 @@
     "react-native-web": "^0.21.2"
   },
   "devDependencies": {
+    "@types/eslint": "^9.6.1",
     "@types/react": "~19.1.0",
+    "@typescript-eslint/eslint-plugin": "^8.59.1",
+    "@typescript-eslint/parser": "^8.59.1",
     "eslint": "^9.39.4",
     "eslint-config-expo": "~10.0.0",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
     "typescript": "~5.9.2"
   },
   "private": true
