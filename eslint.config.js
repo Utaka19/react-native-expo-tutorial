@@ -1,24 +1,26 @@
 import js from "@eslint/js";
 import tseslint from "typescript-eslint";
-import expo from "eslint-config-expo";
 
 export default [
   js.configs.recommended,
+
   ...tseslint.configs.recommendedTypeChecked,
   ...tseslint.configs.stylisticTypeChecked,
-  expo,
+
+  {
+    ignores: ["eslint.config.js"],
+  },
 
   {
     files: ["**/*.ts", "**/*.tsx"],
     languageOptions: {
       parser: tseslint.parser,
       parserOptions: {
-        project: true,
+        project: "./tsconfig.json",
+        tsconfigRootDir: import.meta.dirname,
       },
     },
     rules: {
-      "@typescript-eslint/array-type": "off",
-      "@typescript-eslint/consistent-type-definitions": "off",
       "@typescript-eslint/consistent-type-imports": [
         "warn",
         {
@@ -26,25 +28,11 @@ export default [
           fixStyle: "inline-type-imports",
         },
       ],
+
       "@typescript-eslint/no-unused-vars": [
         "warn",
         { argsIgnorePattern: "^_" },
       ],
-      "@typescript-eslint/require-await": "off",
-      "@typescript-eslint/no-misused-promises": [
-        "error",
-        {
-          checksVoidReturn: { attributes: false },
-        },
-      ],
-      "@typescript-eslint/no-var-requires": "off",
     },
-  },
-
-  {
-    ignores: [
-      "babel.config.js",
-      // "metro.config.js"
-    ],
   },
 ];

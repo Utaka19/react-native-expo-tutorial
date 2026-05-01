@@ -1,6 +1,7 @@
 {
   "name": "react-native-expo-tutorial",
   "version": "1.0.0",
+  "type": "module",
   "main": "src/screens/app.tsx",
   "scripts": {
     "start": "expo start",
@@ -28,7 +29,6 @@
     "@typescript-eslint/eslint-plugin": "^8.59.1",
     "@typescript-eslint/parser": "^8.59.1",
     "eslint": "^9.39.4",
-    "eslint-config-expo": "~10.0.0",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-react-hooks": "^7.1.1",
     "typescript": "~5.5.4",
