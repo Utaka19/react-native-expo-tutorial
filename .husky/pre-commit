@@ -1,0 +1,8 @@
+#!/bin/sh
+
+export NVM_DIR="$HOME/.nvm"
+. "$NVM_DIR/nvm.sh"
+
+nvm use v24.15.0
+
+/Users/sei19/.nvm/versions/node/v24.15.0/bin/pnpm exec lint-staged
