@@ -37,6 +37,13 @@ export default [
         "warn",
         { argsIgnorePattern: "^_" },
       ],
+
+      "@typescript-eslint/no-misused-promises": [
+        "error",
+        {
+          checksVoidReturn: false,
+        },
+      ],
     },
   },
 ];
