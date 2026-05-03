@@ -6,6 +6,7 @@ import { StatusBar } from "expo-status-bar";
 const App: FC = () => {
   return (
     <View style={styles.container}>
+      <Text>Hello, World!</Text>
       <Text>Open up app.tsx to start working on your app!</Text>
       <StatusBar style="auto" />
     </View>
@@ -15,7 +16,7 @@ const App: FC = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#25292e",
     alignItems: "center",
     justifyContent: "center",
   },
