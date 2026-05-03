@@ -21,6 +21,8 @@ export default [
       },
     },
     rules: {
+      "@typescript-eslint/no-require-imports": "off",
+
       "@typescript-eslint/consistent-type-imports": [
         "warn",
         {
